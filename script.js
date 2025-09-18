@@ -2,11 +2,12 @@ const key = document.getElementById('key'); // Replace with your OpenAI API key
 const chatDiv = document.getElementById('chat');
 const inputField = document.getElementById('input');
 const sendButton = document.getElementById('send');
+const applyButton = document.getElementById('apply');
 
-const apiKey = key.value;
 const messages = [{ role: 'system', content: 'You are a helpful assistant.' }];
 
 async function sendMessage() {
+    apiKey = key.value;
     const userInput = inputField.value;
     if (!userInput) return;
 
